@@ -21,7 +21,7 @@ public class AroundLog {
     //环绕通知
     @Around("aroundMove()")
     public void logMove(ProceedingJoinPoint pj){
-        log =  LoggerFactory.getLogger(pj.getTarget().getClass());
+            log =  LoggerFactory.getLogger(pj.getTarget().getClass());
         try {
             log.info("汽车启动前，请插入钥匙");
             pj.proceed();
